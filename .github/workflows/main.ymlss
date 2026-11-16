@@ -1,0 +1,9 @@
+curl -fsSL \
+  https://api.github.com/repos/2dust/AndroidLibXrayLite/releases/tags/v26.7.31 \
+  -o release.json
+
+jq -r '
+.assets[]
+| select(.name == "libv2ray.aar")
+| "GitHub asset digest: \(.digest)"
+' release.json
