@@ -1,0 +1,17 @@
+# Pinned external build dependencies. Read by fetch-deps.sh / fetch-deps.ps1 and by the Gradle checkNativeDeps task.
+# Change only in a reviewed commit. Format: KEY=value (inline comments after #).
+
+# --- Xray-core, gomobile AAR (2dust/AndroidLibXrayLite) ---
+XRAY_AAR_TAG=v26.7.31
+# Source commit of that tag as shown on the GitHub release page (informational).
+XRAY_AAR_SOURCE_COMMIT=b21389865ed69ba01e81c1521965c27832a33cf9
+XRAY_AAR_URL=https://github.com/2dust/AndroidLibXrayLite/releases/download/v26.7.31/libv2ray.aar
+# NOT PINNED YET: the checksum could not be obtained from the sandbox this was prepared in. Builds fail until it is set.
+# Run scripts/fetch-deps.sh --print-sha256 (or the "Pin dependencies" workflow), verify it independently, paste it here.
+XRAY_AAR_SHA256=
+
+# --- hev-socks5-tunnel (heiher/hev-socks5-tunnel), built from source by the NDK ---
+HEV_TAG=2.16.0
+# Full commit of tag 2.16.0 (release page). Submodules are fixed by the gitlinks inside this commit.
+HEV_COMMIT=0a05221275a51a884d93328c55fc2fbc9e9b6974
+HEV_URL=https://github.com/heiher/hev-socks5-tunnel
